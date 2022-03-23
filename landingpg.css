@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+    
+}
+section{
+    display: flex;
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url("file:///E:/Oasis%20Project/TASK%201/background-2687925_960_720.jpg")no-repeat;
+    background-size: cover;
+    
+}
+header{
+    position: relative;
+   top: 0;
+   width: 100%;
+   padding: 30px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+header .logo{
+    position: relative;
+    color: rgb(0, 27, 116);
+    font-size: 38px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+header .navigation a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 1px;
+    padding: 7px 19px;
+    border-radius: 15px;
+    transition: 0.3s;
+    transition-property: background;
+}
+header .navigation a:not(:last-child){
+    margin-right: 30px;
+
+}
+header .navigation a:hover{
+    background: rgb(14, 131, 139);
+    color: white;
+}
+header .logo span{
+    color: rgb(1, 128, 145);
+    text-transform: lowercase;
+    font-weight: 500;
+}
+.content{
+    max-width: 650px;
+    margin: 60px 100px;
+    margin-top: -500px; 
+     
+}
+
+
+.content .info h2{
+    color: rgb(27, 18, 73);
+    font-size: 57px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.content .info span{
+    color: rgb(6, 122, 122);
+    font-weight: 600;
+}
+.content .info h4{
+    font-size: 22px;
+    padding: 7px 23px;
+    background-color: rgb(255, 198, 75);
+    display: initial;
+    border-radius: 20px;
+    color: black;
+    align-items: center;
+   
+}
+.content .info h4:hover{
+    color: antiquewhite;
+    background-color: rgb(71, 22, 105);
+}
+.content .info p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+}
+.content .info-btn{
+    color: #fff;
+    background: rgb(10, 99, 99);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 14px 26px;
+    border-radius: 7px;
+    transition: 0.3s;
+    
+    transition-property: background;
+}
+.content .info-btn:hover{
+    background: rgb(19, 153, 153);
+}
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   
+}
+.media-icons a{
+    position: relative;
+    color:rgb(0, 3, 48);
+    font-size: 35px;
+    
+    
+}
+.media-icons a:not(:last-child){
+    margin-right: 70px;
+}
+.media-icons a:hover{
+    transform: scale(1.8);
+}
+
+label{
+    display: none;
+}
+.checkbox{
+    display: none;
+}
+#check{
+    z-index: 3;
+}
+
+.hov:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+/*responsive styles*/
+
+@media (max-width: 460px) {
+    header .navigation{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label:hover{
+        color: #fff;
+    }
+    label .close-btn{
+        display: none;
+    }
+    img{
+        display: none;
+    }
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgb(147, 207, 211);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-left: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked ~ header label .menu-btn{
+        display: none;
+    }
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .menu-btn{
+        position: absolute;
+    }
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+    .content .info h2{
+        font-size: 25px;
+        line-height: 150px;
+        margin-bottom: 50px;
+    }
+    .content .info h2 span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 15px;
+    }
+}
+@media (max-width: 560px) {
+
+   .content .info h2{
+        font-size: 15px;
+        line-height: 200px;
+    }
+    .content .info h2 span{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .content .info h4{
+        font-size: 14px;
+    }
+    .content .info p{
+        font-size: 18px;
+    } 
+}
+
+
+/* footer section start */
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-shadow: 2px 10px 4px solid black;
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+/* 
+.footer1 .content{
+    padding: 10px 20px;
+} */
+
+.footer  h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.footer  h2::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 100px;
+    align-items: center;
+    background: rgb(86, 20, 112);
+}
+/* .footer .about{
+    flex-basis: 35%;
+} */
+
+.footer  .p1{
+    
+    font-size: 20px;
+}
+
+.footer  .social{
+    width: 100%;
+    margin-top:-15px;
+    display: flex;
+    justify-content: start;
+}
+
+.footer  .social a{
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    color: black;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+.footer  .social a:hover{
+    background: rgb(107, 102, 102);
+}
+
+.footer  .social a i{
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    margin-top: 12px;
+}
+
+.footer .links{
+    
+    margin-left: 20px;
+    
+    
+}
+
+.footer .links ul{
+    list-style: none;
+}
+
+.footer .links ul li{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer .links ul li a{
+    text-decoration: none;
+    color: rgb(65, 62, 62);
+}
+
+.footer .links ul li a:hover{
+    color: rgb(100, 35, 97);
+}
+
+.footer .links2{
+    
+    margin-left: 190px;
+    
+}
+
+.footer .links2 ul{
+    list-style: none;
+}
+
+.footer .links2 ul li{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer .links2 ul li a{
+    text-decoration: none;
+    color: rgb(61, 57, 57);
+}
+
+.footer .links2 ul li a:hover{
+    color: rgb(78, 25, 78);
+}
+
+.links h2::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 180px;
+    align-items: center;
+    background: rgb(114, 49, 105);
+}
+.links2 h2::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 180px;
+    align-items: center;
+    background: rgb(81, 38, 85);
+}
+/* flooter section ends */
+
